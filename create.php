@@ -90,7 +90,7 @@
         />
         <input
           class="form-control mt-3"
-          type="time"
+          type="datetime-local"
           name="date"
           aria-label="default input example"
         />

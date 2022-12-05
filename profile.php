@@ -133,7 +133,7 @@
         ></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link ms-5" href="profile.php"
+        <a class="nav-link ms-5 fs-3" href="profile.php"
           ><i class="bi bi-person-fill"></i
         ></a>
       </li>

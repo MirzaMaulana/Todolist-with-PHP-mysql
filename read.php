@@ -154,7 +154,7 @@
   <body class="mx-2">
     <nav class="navbar navbar mt-1">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
           <i class="fs-2 bi bi-arrow-left"></i>
         </a>
         <span class="ms-auto me-3"
@@ -185,7 +185,7 @@
             <img src="./asset./img/main 1.png" alt="" class="card-img mx-2">
             <div class="card-body">
               <h5>School</h5>
-              <p>5 tasks</p>
+              <p>5 Tasks</p>
             </div>
           </div>
         </div>
@@ -194,7 +194,7 @@
             <img src="./asset./img/main 2.png" alt="" class="card-img mx-2">
             <div class="card-body">
               <h5>Work</h5>
-              <p>5 tasks</p>
+              <p>5 Tasks</p>
             </div>
           </div>
         </div>
@@ -203,7 +203,7 @@
             <img src="./asset./img/main 3.png" alt="" class="card-3 mx-2">
             <div class="card-body">
               <h5>Personal</h5>
-              <p>5 tasks</p>
+              <p>5 Tasks</p>
             </div>
           </div>
         </div>
@@ -215,7 +215,7 @@
       $sql2 = "select * from tasks order by id desc";
       $q2   = mysqli_query($connect,$sql2);
       while($row = mysqli_fetch_array($q2)){ ?>
-      <?php if ($kategori === "school") { ?>
+      <?php if ($row['kategori'] == "school") { ?>
         <div class="data1 shadow">
               <div class="data-header">
                <a href="read.php?del_task=<?php echo $row['id']?>"><button type="button" class="btn btn-outline-danger float-end">Delete</button></a>
@@ -226,7 +226,7 @@
                <p><?php echo $row['date']?></p>
               </div>
            </div>
-      <?php } elseif($kategori === "work"){ ?>
+      <?php } elseif($row['kategori'] == "work"){ ?>
         <div class="data2 shadow">
               <div class="data-header">
                 <a href="read.php?del_task=<?php echo $row['id']?>"><button type="button" class="btn btn-outline-danger float-end">Delete</button></a>

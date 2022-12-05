@@ -12,17 +12,17 @@ if(!$connect){
 
 $tasks = mysqli_query($connect, "SELECT * FROM tasks");
 
-// //  total
-//   $tasks = mysqli_query($connect, "SELECT * FROM tasks");
-//   $getdata = mysqli_query($connect, "SELECT * FROM tasks");
-//   $total   = mysqli_num_rows($getdata);
+// hitung jumlah
+
 //   delete
   if (isset($_GET['del_task'])) {
     $id = $_GET['del_task'];
     mysqli_query($connect, "DELETE FROM tasks WHERE id=$id");
     header('location: read.php');
   }
-  // create 
+  
+  
+  // create database
   $task     = "";
   $date     = "";
   $kategori = "";
